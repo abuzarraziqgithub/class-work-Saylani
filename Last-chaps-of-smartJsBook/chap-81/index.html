@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Control : Testing Blockers</title>
+  </head>
+  <body>
+    <script>
+      // IT IS THE FUNCTION WHICH WILL CHECK IF POPUP IS DISABLED THEN SHOW THE MESSAGE BELOW.
+      const checkForPopBlocker = function () {
+        // THE testPop WILL OPEN A WINDOW WITH THE WIDTH AND HEIGHT OF 100 , AND IT WILL THEN CLOSE AUTOMATICALLY.
+        const testPop = window.open("", "", "width-100 , height-100");
+        if (testPop === null) {
+          alert("Please disable your popup blocker.");
+        }
+        // IT WILL CLOSE THE POPUP IMMEDIATELY AFTER CHECKING THE CODITION.
+        testPop.close();
+      };
+      checkForPopBlocker();
+    </script>
+  </body>
+</html>
