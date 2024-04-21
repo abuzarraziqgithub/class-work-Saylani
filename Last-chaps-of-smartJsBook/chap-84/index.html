@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <p>Radio Buttons</p>
+
+    <form onsubmit="validateRadios()">
+      <input type="radio" name="r1" value="cat" /> Cat<br />
+      <input type="radio" name="r1" value="bat" /> Bat<br />
+      <input type="radio" name="r1" value="hat" /> Hat<br />
+      <input type="submit" value="submit Form" /><br />
+    </form>
+    <script>
+      // IT IS THE FUNCTION WHICH WILL RETURN TRUE IF THE USER CHECK THE RADIO , OTHERWISE IT WILL SHOW THW MESSAGE AND WILL RETURN FALSE
+      const validateRadios = function () {
+        let radios = document.getElementsByName("r1");
+        for (let i = 0; i < radios.length; i++) {
+          if (radios[i].checked) {
+            return true;
+          }
+        }
+        alert("Please Check One.");
+        return false;
+      };
+    </script>
+  </body>
+</html>
