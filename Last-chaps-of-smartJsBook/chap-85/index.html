@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <p>ZIP CODES</p>
+
+    <form onsubmit="validateZIP()">
+      <input type="text" placeholder="ZIP goes Here" id="zipCode" /><br />
+      <input type="submit" value="submit Form" />
+    </form>
+
+    <script>
+      const validateZIP = function () {
+        let numChars = document.getElementById("zipCode").value.length;
+        if (numChars < 5 || numChars > 5) {
+          alert("Please enter a correct ZIP code");
+          return false;
+        }
+      };
+    </script>
+  </body>
+</html>
