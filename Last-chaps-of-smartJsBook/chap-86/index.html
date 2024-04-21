@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <p>Email</p>
+
+    <form onsubmit="return validateEmail()">
+      <input type="text" placeholder="Your email..." id="email" /><br />
+      <input type="submit" value="Validate Email" />
+    </form>
+
+    <script>
+      const validateEmail = function () {
+        let addressLegal = true;
+        let eEntered = document.getElementById("email").value;
+
+        if (eEntered.indexOf(" ") !== -1) {
+          alert("No Spaces allowed in email Address");
+          addressLegal = false;
+        }
+        if (
+          eEntered.indexOf("@") < 1 ||
+          eEntered.indexOf("@") > eEntered.length - 5
+        ) {
+          addressLegal = false;
+        }
+        if (
+          eEntered.indexOf("." - eEntered.indexOf("@")) < 2 ||
+          eEntered.indexOf(".") > eEntered.length - 3
+        ) {
+          addressLegal = false;
+        }
+        if (addressLegal === false) {
+          alert("Please enter correct email address");
+          return false;
+        }
+      };
+    </script>
+  </body>
+</html>
