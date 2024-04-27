@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <header id="calculator">
+        <div class="display">
+          <input id="display" readonly />
+        </div>
+        <section id="keys">
+          <button onclick="displayOutPut('7')">7</button>
+          <button onclick="displayOutPut('8')">8</button>
+          <button onclick="displayOutPut('9')">9</button>
+          <button onclick="displayOutPut('-')" class="operator-btn">-</button>
+          <button onclick="displayOutPut('4')">4</button>
+          <button onclick="displayOutPut('5')">5</button>
+          <button onclick="displayOutPut('6')">6</button>
+          <button onclick="displayOutPut('*')" class="operator-btn">*</button>
+          <button onclick="displayOutPut('1')">1</button>
+          <button onclick="displayOutPut('2')">2</button>
+          <button onclick="displayOutPut('3')">3</button>
+          <button onclick="displayOutPut('/')" class="operator-btn">/</button>
+          <button onclick="displayOutPut('0')">0</button>
+          <button onclick="displayOutPut('.')">.</button>
+          <button onclick="calculate()">=</button>
+          <button onclick="displayOutPut('+')" class="operator-btn">+</button>
+          <button onclick="clearDisplay()" class="operator-btn" id="c-btn">
+            C
+          </button>
+        </section>
+      </header>
+    </div>
+    <script src="./logic.js"></script>
+  </body>
+</html>
